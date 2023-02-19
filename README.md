@@ -5,6 +5,8 @@ We provide the implementaion of Count-GNN model on Small,Large,MUTAG dataset.
 The repository is organised as follows:
 - data/: contains datasets.
 - Count_GNN/: contains our model.
+- converter/: transform the original dataset into the data format that can be inputted into Count_GNN.
+- generator/: generate synthetic dataset.
 
 ## Package Dependencies
 
