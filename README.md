@@ -26,6 +26,6 @@ To run evaluate.py:
 python evaluate.py ../dumps/MUTAG
 
 ## Citation
-* Title： Learning to Count Isomorphisms with Graph Neural Networks
-* Author: Xingtong Yu*, Zemin Liu*, Yuan Fang, Xinming Zhang
-* In proceedings: AAAI23
+* **Title**： Learning to Count Isomorphisms with Graph Neural Networks
+* **Author**: Xingtong Yu*, Zemin Liu*, Yuan Fang, Xinming Zhang
+* **In proceedings**: AAAI23
