@@ -1,6 +1,6 @@
 
 # Count-GNN
-We provide the implementaion of Count-GNN model.
+We provide the implementaion of **"Learning to Count Isomorphisms with Graph Neural Networks"**.
 
 The repository is organised as follows:
 - **data/**: contains datasets.
