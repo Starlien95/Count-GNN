@@ -3,7 +3,7 @@
 We provide the implementaion of [**"Learning to Count Isomorphisms with Graph Neural Networks"**](https://arxiv.org/pdf/2302.03266.pdf).
 
 The repository is organised as follows:
-- **data/**: contains datasets.
+- **dataset/data/**: contains data we use. Need to be decompressed and be placed in the same path as Count_GNN/
 - **Count_GNN/**: contains our model.
 - **converter/**: transform the original dataset into the data format that can be inputted into Count_GNN.
 - **generator/**: generate synthetic dataset.
