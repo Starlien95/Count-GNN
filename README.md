@@ -25,3 +25,7 @@ python _train.py --model EDGEMEAN --predict_net FilmSumPredictNet --emb_dim 4 --
 To run evaluate.py:
 python evaluate.py ../dumps/MUTAG
 
+## Citation
+Title： Learning to Count Isomorphisms with Graph Neural Networks
+Author: Xingtong Yu*, Zemin Liu*, Yuan Fang, Xinming Zhang
+In proceedings: AAAI23
