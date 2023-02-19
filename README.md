@@ -20,9 +20,9 @@ The repository is organised as follows:
 
 ## Running experiments
 
-* **To run _train.py**:
+* **train model**:
 python _train.py --model EDGEMEAN --predict_net FilmSumPredictNet --emb_dim 4 --ppn_hidden_dim 12 --weight_decay_film 0.0001
-* **To run evaluate.py**:
+* **test model**:
 python evaluate.py ../dumps/MUTAG
 
 ## Citation
