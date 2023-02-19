@@ -1,6 +1,6 @@
 
 # Count-GNN
-We provide the code (in pytorch) and datasets for our paper [**"Learning to Count Isomorphisms with Graph Neural Networks"**](https://arxiv.org/pdf/2302.03266.pdf), which is published in AAAI23.
+We provide the code (in pytorch) and datasets for our paper [**"Learning to Count Isomorphisms with Graph Neural Networks"**](https://arxiv.org/pdf/2302.03266.pdf), which is accepted by AAAI23.
 
 ## Description
 The repository is organised as follows:
