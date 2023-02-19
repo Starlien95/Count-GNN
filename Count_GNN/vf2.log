@@ -1,0 +1,115 @@
+Using backend: pytorch
+2021/04/18 20:33:22: [ PPN(
+  (g_v_enc): Embedding(64, 12)
+  (g_e_enc): Embedding(256, 16)
+  (g_vl_enc): Embedding(16, 8)
+  (g_el_enc): Embedding(16, 8)
+  (p_v_enc): Embedding(8, 6)
+  (p_e_enc): Embedding(8, 6)
+  (p_vl_enc): Embedding(8, 6)
+  (p_el_enc): Embedding(8, 6)
+  (vl_flt): MaxGatedFilterNet()
+  (el_flt): MaxGatedFilterNet()
+  (g_vl_emb): EquivariantEmbedding(
+    (emb_layer): Linear(in_features=8, out_features=8, bias=False)
+  )
+  (g_el_emb): EquivariantEmbedding(
+    (emb_layer): Linear(in_features=8, out_features=8, bias=False)
+  )
+  (p_vl_emb): EquivariantEmbedding(
+    (emb_layer): Linear(in_features=6, out_features=8, bias=False)
+  )
+  (p_el_emb): EquivariantEmbedding(
+    (emb_layer): Linear(in_features=6, out_features=8, bias=False)
+  )
+  (g_net): ModuleList(
+    (graph_rgc0): EGAT(
+      (gat): GATNeigh_Agg(
+        (act): LeakyReLU(negative_slope=0.18181818181818182)
+      )
+      (emb): EdgeEmbedding_F3_4(
+        (act): LeakyReLU(negative_slope=0.18181818181818182)
+        (linear1): Linear(in_features=24, out_features=24, bias=True)
+        (linear2): Linear(in_features=24, out_features=24, bias=True)
+      )
+    )
+    (graph_rgc1): EGAT(
+      (gat): GATNeigh_Agg(
+        (act): LeakyReLU(negative_slope=0.18181818181818182)
+      )
+      (emb): EdgeEmbedding_F3_4(
+        (act): LeakyReLU(negative_slope=0.18181818181818182)
+        (linear1): Linear(in_features=24, out_features=24, bias=True)
+        (linear2): Linear(in_features=24, out_features=24, bias=True)
+      )
+    )
+    (graph_rgc2): EGAT(
+      (gat): GATNeigh_Agg(
+        (act): LeakyReLU(negative_slope=0.18181818181818182)
+      )
+      (emb): EdgeEmbedding_F3_4(
+        (act): LeakyReLU(negative_slope=0.18181818181818182)
+        (linear1): Linear(in_features=24, out_features=24, bias=True)
+        (linear2): Linear(in_features=24, out_features=24, bias=True)
+      )
+    )
+  )
+  (p_net): ModuleList(
+    (graph_rgc0): EGAT(
+      (gat): GATNeigh_Agg(
+        (act): LeakyReLU(negative_slope=0.18181818181818182)
+      )
+      (emb): EdgeEmbedding_F3_4(
+        (act): LeakyReLU(negative_slope=0.18181818181818182)
+        (linear1): Linear(in_features=24, out_features=24, bias=True)
+        (linear2): Linear(in_features=24, out_features=24, bias=True)
+      )
+    )
+    (graph_rgc1): EGAT(
+      (gat): GATNeigh_Agg(
+        (act): LeakyReLU(negative_slope=0.18181818181818182)
+      )
+      (emb): EdgeEmbedding_F3_4(
+        (act): LeakyReLU(negative_slope=0.18181818181818182)
+        (linear1): Linear(in_features=24, out_features=24, bias=True)
+        (linear2): Linear(in_features=24, out_features=24, bias=True)
+      )
+    )
+    (graph_rgc2): EGAT(
+      (gat): GATNeigh_Agg(
+        (act): LeakyReLU(negative_slope=0.18181818181818182)
+      )
+      (emb): EdgeEmbedding_F3_4(
+        (act): LeakyReLU(negative_slope=0.18181818181818182)
+        (linear1): Linear(in_features=24, out_features=24, bias=True)
+        (linear2): Linear(in_features=24, out_features=24, bias=True)
+      )
+    )
+  )
+  (predict_net): SumPredictNet(
+    (act): LeakyReLU(negative_slope=0.18181818181818182)
+    (drop): Dropout(p=0.2, inplace=False)
+    (p_layer): Linear(in_features=62, out_features=128, bias=True)
+    (g_layer): Linear(in_features=90, out_features=128, bias=True)
+    (pred_layer1): Linear(in_features=516, out_features=128, bias=True)
+    (pred_layer2): Linear(in_features=132, out_features=1, bias=True)
+  )
+  (g_linear): Linear(in_features=24, out_features=24, bias=True)
+  (p_linear): Linear(in_features=24, out_features=24, bias=True)
+) ]
+2021/04/18 20:33:22: [ num of parameters: 94573 ]
+2021/04/18 20:33:22: [ loading data from pt... ]
+2021/04/18 20:33:23: [ data (data_type: train, len: 1000) generated ]
+2021/04/18 20:33:23: [ data_loader (data_type: train, len: 4, batch_size: 256) generated ]
+2021/04/18 20:33:23: [ data (data_type: dev  , len: 500) generated ]
+2021/04/18 20:33:23: [ data_loader (data_type: dev  , len: 2, batch_size: 256) generated ]
+Traceback (most recent call last):
+  File "run_vf2.py", line 424, in <module>
+    dataset.load(os.path.join(train_config["save_data_dir"], "%s_dgl_dataset.pt" % (data_type)))
+  File "/home/yxt/Code/EC4PC/newsrcsmall/dataset.py", line 257, in load
+    data = torch.load(f)
+  File "/home/yxt/anaconda3/envs/dgl/lib/python3.7/site-packages/torch/serialization.py", line 593, in load
+    return _legacy_load(opened_file, map_location, pickle_module, **pickle_load_args)
+  File "/home/yxt/anaconda3/envs/dgl/lib/python3.7/site-packages/torch/serialization.py", line 762, in _legacy_load
+    magic_number = pickle_module.load(f, **pickle_load_args)
+EOFError: Ran out of input

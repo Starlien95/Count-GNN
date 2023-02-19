@@ -1,0 +1,28 @@
+--model RGIN --predict_net DIAMNet \
+--predict_net_mem_init mean --predict_net_mem_len 4 --predict_net_recurrent_steps 3 \
+--gpu_id 0 --batch_size 10 \
+--max_npv 8 --max_npe 8 --max_npvl 8 --max_npel 8 \
+--max_ngv 64 --max_nge 256 --max_ngvl 16 --max_ngel 16 \
+--pattern_dir ../data/debug/patterns \
+--graph_dir ../data/debug/graphs \
+--metadata_dir ../data/debug/metadata \
+--save_data_dir ../data/debug \ 
+--save_model_dir ../dumps/debug/RGIN-DIAMNet \
+--load_model_dir ../dumps/small/RGIN-SumPredictNet
+
+
+
+python train.py --model RGIN --predict_net DIAMNet \
+--predict_net_mem_init mean --predict_net_mem_len 4 --predict_net_recurrent_steps 3 \
+--gpu_id -1 --batch_size 10 \
+--max_npv 8 --max_npe 8 --max_npvl 8 --max_npel 8 \
+--max_ngv 64 --max_nge 256 --max_ngvl 16 --max_ngel 16 \
+--pattern_dir ../data/debug/patterns \
+--graph_dir ../data/debug/graphs \
+--metadata_dir ../data/debug/metadata \
+--save_data_dir ../data/debug \
+--save_model_dir ../dumps/debug/RGIN-DIAMNet
+
+
+
+
