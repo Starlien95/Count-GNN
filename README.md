@@ -27,6 +27,9 @@ python _train.py --model EDGEMEAN --predict_net FilmSumPredictNet --emb_dim 4 --
 python evaluate.py ../dumps/MUTAG
 
 ## Citation
-* **Title**： Learning to Count Isomorphisms with Graph Neural Networks
-* **Author**: Xingtong Yu*, Zemin Liu*, Yuan Fang, Xinming Zhang
-* **In proceedings**: AAAI23
+@inproceedings{yu2023learning,\
+  title={Learning to Count Isomorphisms with Graph Neural Networks},\
+  author={Yu, Xingtong and Liu, Zemin and Fang, Yuan and Zhang, Xinming},\
+  booktitle={Proceedings of the AAAI conference on artificial intelligence},\
+  year={2023}\
+}
