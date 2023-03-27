@@ -8,6 +8,7 @@ The repository is organised as follows:
 - **Count_GNN/**: contains our model.
 - **converter/**: transform the original dataset into the data format that can be inputted into Count_GNN.
 - **generator/**: generate synthetic dataset.
+- **Appendix.pdf**: Appendix of our paper [**"Learning to Count Isomorphisms with Graph Neural Networks"**](https://arxiv.org/pdf/2302.03266.pdf)
 
 ## Package Dependencies
 
